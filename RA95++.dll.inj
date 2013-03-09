@@ -1,0 +1,13 @@
+; Get Syringe to load our dll properly
+00590490 = Init_Game_Hook, 0
+
+;4F4060 = Init_Game_Hook_, 5
+;456174 = BuildingClass__AI_Hook_, 5
+;4AB5AC = Crate_From_Name_Hook_, 5
+
+;00404120 = CrateClass__Constructor_Hook_, 5
+;004AC91C = CrateClass__Create_Crate_Hook_, 5
+;004ACB1C = CrateClass__Get_Crate_Hook_, 5
+;004AC9B4 = CrateClass__Put_Crate_Hook_, 5
+;004AC8E0 = CrateClass__Remove_It_Hook_, 5
+;004054D0 = CrateClass__Destructor_Hook_, 5
