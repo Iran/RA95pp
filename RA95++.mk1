@@ -1,0 +1,59 @@
+!define BLANK ""
+"C:\Users\Maikel\Desktop\RA95++\BuildingClass.obj" : "C:\Users\Maikel\Deskto&
+p\RA95++\src\BuildingClass.cpp" .AUTODEPEND
+ @C:
+ cd C:\Users\Maikel\Desktop\RA95++
+ *wpp386 src\BuildingClass.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -wcd&
+726 -wcd013 -zq -otexan -d2 -bd -6r -bt=nt -fo=.obj -mf -xd
+
+"C:\Users\Maikel\Desktop\RA95++\CrateClass.obj" : "C:\Users\Maikel\Desktop\R&
+A95++\src\CrateClass.cpp" .AUTODEPEND
+ @C:
+ cd C:\Users\Maikel\Desktop\RA95++
+ *wpp386 src\CrateClass.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -wcd726&
+ -wcd013 -zq -otexan -d2 -bd -6r -bt=nt -fo=.obj -mf -xd
+
+"C:\Users\Maikel\Desktop\RA95++\Debug.obj" : "C:\Users\Maikel\Desktop\RA95++&
+\src\Debug.cpp" .AUTODEPEND
+ @C:
+ cd C:\Users\Maikel\Desktop\RA95++
+ *wpp386 src\Debug.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -wcd726 -wcd&
+013 -zq -otexan -d2 -bd -6r -bt=nt -fo=.obj -mf -xd
+
+"C:\Users\Maikel\Desktop\RA95++\dllmain.obj" : "C:\Users\Maikel\Desktop\RA95&
+++\src\dllmain.cpp" .AUTODEPEND
+ @C:
+ cd C:\Users\Maikel\Desktop\RA95++
+ *wpp386 src\dllmain.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -wcd726 -w&
+cd013 -zq -otexan -d2 -bd -6r -bt=nt -fo=.obj -mf -xd
+
+"C:\Users\Maikel\Desktop\RA95++\Game.obj" : "C:\Users\Maikel\Desktop\RA95++\&
+src\Game.cpp" .AUTODEPEND
+ @C:
+ cd C:\Users\Maikel\Desktop\RA95++
+ *wpp386 src\Game.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -wcd726 -wcd0&
+13 -zq -otexan -d2 -bd -6r -bt=nt -fo=.obj -mf -xd
+
+"C:\Users\Maikel\Desktop\RA95++\RA95++.dll" : "C:\Users\Maikel\Desktop\RA95+&
++\BuildingClass.obj" "C:\Users\Maikel\Desktop\RA95++\CrateClass.obj" "C:\Use&
+rs\Maikel\Desktop\RA95++\Debug.obj" "C:\Users\Maikel\Desktop\RA95++\dllmain.&
+obj" "C:\Users\Maikel\Desktop\RA95++\Game.obj" "C:\Users\Maikel\Desktop\RA95&
+++\src\CrateClass.h" "C:\Users\Maikel\Desktop\RA95++\src\Debug.h" "C:\Users\&
+Maikel\Desktop\RA95++\src\Game.h" "C:\Users\Maikel\Desktop\RA95++\src\Hookin&
+g.h" "C:\Users\Maikel\Desktop\RA95++\src\Macros.h" .AUTODEPEND
+ @C:
+ cd C:\Users\Maikel\Desktop\RA95++
+ @%write "RA95++.lk1" FIL BuildingClass.obj,CrateClass.obj,Debug.obj,dllmain&
+.obj,Game.obj
+ @%append "RA95++.lk1" 
+!ifneq BLANK ""
+ *wlib -q -n -b "RA95++.imp" 
+ @%append "RA95++.lk1" LIBR 'RA95++.imp'
+!endif
+!ifneq BLANK ""
+ @%append "RA95++.lk1" 
+!endif
+ *wlink name 'RA95++' d all sys nt_dll op m op maxe=25 op q op symf @'RA95++&
+.lk1'
+ wlib -q -n -b "RA95++.lib" +"RA95++.dll"
+
