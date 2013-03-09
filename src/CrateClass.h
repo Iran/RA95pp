@@ -6,17 +6,17 @@ typedef int CrateType;
 
 CrateType Crate_From_Name(char *CrateName);
 
-struct CrateClass 
+class CrateClass 
 {
 public:
 
-	void Constructor();
-	int Create_Crate(short);
-	static int Get_Crate(short);
-	static bool Put_Crate(short *);
-	int Remove_It(void);
+    void Constructor();
+    int Create_Crate(short);
+    static int Get_Crate(short);
+    static bool Put_Crate(short *);
+    int Remove_It(void);
 //	void * CrateClass::operator`__arrdtorblk'(unsigned int)
-	void Destructor() {}
+    void Destructor() {}
     
     static void Init_Hooks();
 };
