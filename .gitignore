@@ -2,6 +2,8 @@
 *.dll
 *.inj
 *.idb
+*.err
+*.id0
 RA95++.map
 RA95++.nam
 RA95++.tgt
