@@ -1,0 +1,15 @@
+*.obj
+*.dll
+*.inj
+*.idb
+RA95++.map
+RA95++.nam
+RA95++.tgt
+RA95++.til
+RA95++.sym
+RA95++.lib
+src/*.inc
+*.inc
+*.exe
+extpe
+linker
