@@ -1,3 +1,7 @@
+#define char int8
+#define short int int16
+#define long int32
+
 #define SYRINGE_EXPORT extern "C" __declspec(dllexport) int
 #define NAKED_FUNC __declspec(naked)
 #define ASM_INT3       { _asm { int 3 } }
