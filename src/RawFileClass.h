@@ -3,6 +3,17 @@
 class RawFileClass 
 {
 public:
+    // These offsets are taken from TT Scripts 4.0's reversed
+    // engineered RawFileClass for C&C Renegade
+    // I haven't checked whether they're correct for Red Alert
+	int Rights; // 0004
+	int BiasStart; // 0008
+	int BiasLength; // 000C
+	void* Handle; // 0010
+	char *Filename; // 0014
+	unsigned short Date; // 0018
+	unsigned short Time; // 001C
+    
     //RawFileClass::RawFileClass(void)
     //RawFileClass::RawFileClass(char *FileName)
     //RawFileClass::~RawFileClass(void)
