@@ -34,17 +34,26 @@ src\Game.cpp" .AUTODEPEND
  *wpp386 src\Game.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -wcd726 -wcd0&
 13 -zq -otexan -d2 -bd -6r -bt=nt -fo=.obj -mf -xd
 
+"C:\Users\Maikel\Desktop\RA95++\RawFileClass.obj" : "C:\Users\Maikel\Desktop&
+\RA95++\src\RawFileClass.cpp" .AUTODEPEND
+ @C:
+ cd C:\Users\Maikel\Desktop\RA95++
+ *wpp386 src\RawFileClass.cpp -i="C:\WATCOM/h;C:\WATCOM/h/nt" -w4 -e25 -wcd7&
+26 -wcd013 -zq -otexan -d2 -bd -6r -bt=nt -fo=.obj -mf -xd
+
 "C:\Users\Maikel\Desktop\RA95++\RA95++.dll" : "C:\Users\Maikel\Desktop\RA95+&
 +\BuildingClass.obj" "C:\Users\Maikel\Desktop\RA95++\CrateClass.obj" "C:\Use&
 rs\Maikel\Desktop\RA95++\Debug.obj" "C:\Users\Maikel\Desktop\RA95++\dllmain.&
 obj" "C:\Users\Maikel\Desktop\RA95++\Game.obj" "C:\Users\Maikel\Desktop\RA95&
-++\src\CrateClass.h" "C:\Users\Maikel\Desktop\RA95++\src\Debug.h" "C:\Users\&
-Maikel\Desktop\RA95++\src\Game.h" "C:\Users\Maikel\Desktop\RA95++\src\Hookin&
-g.h" "C:\Users\Maikel\Desktop\RA95++\src\Macros.h" .AUTODEPEND
+++\RawFileClass.obj" "C:\Users\Maikel\Desktop\RA95++\src\CrateClass.h" "C:\U&
+sers\Maikel\Desktop\RA95++\src\Debug.h" "C:\Users\Maikel\Desktop\RA95++\src\&
+Game.h" "C:\Users\Maikel\Desktop\RA95++\src\Hooking.h" "C:\Users\Maikel\Desk&
+top\RA95++\src\Macros.h" "C:\Users\Maikel\Desktop\RA95++\src\RawFileClass.h"&
+ .AUTODEPEND
  @C:
  cd C:\Users\Maikel\Desktop\RA95++
  @%write "RA95++.lk1" FIL BuildingClass.obj,CrateClass.obj,Debug.obj,dllmain&
-.obj,Game.obj
+.obj,Game.obj,RawFileClass.obj
  @%append "RA95++.lk1" 
 !ifneq BLANK ""
  *wlib -q -n -b "RA95++.imp" 

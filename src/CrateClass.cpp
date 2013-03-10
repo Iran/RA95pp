@@ -131,7 +131,7 @@ CrateType Crate_From_Name_Hook()
 void CrateClass__Constructor_Hook() 
 {
     GET_EAX(CrateClass*, Crate);
-    Debug::Log("calling CrateClass Constructor.\n");
+//    Debug::Log("calling CrateClass Constructor.\n");
     Crate->Constructor();
 }
         

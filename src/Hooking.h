@@ -2,7 +2,9 @@
 
 #include <Windows.h>
 #include "src/Debug.h"
+#include "src/Macros.h"
 #include "src/CrateClass.h"
+#include "src/RawFileClass.h"
 #include "src/Game.h"
 
 
@@ -14,10 +16,11 @@ public:
     {
         DEBUG_LOG_FUNC;
         Game__Init_Hooks();
+        RawFileClass::Init_Hooks();
         CrateClass::Init_Hooks();
     }
     
-	static bool Hooking::WriteMemory(int Address, const void* Buffer, int Size)
+        static bool Hooking::WriteMemory(int Address, const void* Buffer, int Size)
     {
         bool ret = 1;
         DWORD OldProtect;
@@ -33,9 +36,9 @@ public:
         return ret;
     };
     
-	static void Hooking::JMP_Hook(int Addr, int Function)
+        static void Hooking::JMP_Hook(int Addr, int Function)
     {
-    	int HookAddress;
+        int HookAddress;
         int Offset;
         char OpCode = '\xE9';
         HookAddress = Addr;

@@ -1,7 +1,5 @@
 #pragma once
 
-#include "src/Macros.h"
-
 typedef int CrateType;
 
 CrateType Crate_From_Name(char *CrateName);
